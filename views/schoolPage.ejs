@@ -1,0 +1,19 @@
+<% include partials/header %>
+<h1>All Schools</h1>
+<br/>
+<h1>Add new School</h1>
+<div class="card">
+    <form action='/schools' method="POST">
+        <input name="schoolName" placeholder="enter school name">
+        <input name="SchoolLocation" placeholder="enter school location">
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<% for(var i=0; i<schoolData.length;i++) { %>
+        <li><%=schoolData[i]%></li>
+<%} %>
+
+
+
+

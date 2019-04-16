@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+<h1>   Add people</h1>
+<form action="/" method="POST">
+ <input placeholder="add people" name="people">
+<button type="submit">Submit</button>
+</form>
+
+
+
+
+<% for(var i=0; i<people.length; i++){ %>
+           <div>
+             <li>  <%= people[i] %> </li> 
+            </div>
+    <% } %>
+
+
+    <% include partials/footer %>

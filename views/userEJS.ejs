@@ -1,0 +1,20 @@
+<h1>Save User details in details</h1>
+
+<form action="/user" method="POST">
+    <input  name="userName" placeholder="enter name" type="text">
+    <input name="phone" placeholder="enter phone" type="number">
+    <button type="submit">Submit</button>
+</form>
+
+
+<h3>All users data</h3>
+<% for(var i=0;i<data.length; i++) {%>
+    <div style="border: 2px solid black">
+            <%= data[i].userName %>
+            <%= data[i].phone %>
+            <br/>
+            <%=data[i]._id %>
+            <a href='user/<%=data[i]._id %>' >Show More</a>
+    </div>
+            
+<% } %>
